@@ -1,0 +1,10 @@
+{
+  "name": "default-to-named-export",
+  "main": "defaultToNamedExport.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apepper/defaultToNamedExport.git"
+  },
+  "author": "Alexander Pepper",
+  "license": "UNLICENSED"
+}
