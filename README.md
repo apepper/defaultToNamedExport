@@ -2,7 +2,7 @@
 
 `export default` is considered harmful. See https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/ for some reasoning.
 
-Uses [jscondeshift](https://github.com/facebook/jscodeshift) to transform "export default" to named exports.
+Uses [jscodeshift](https://github.com/facebook/jscodeshift) to transform "export default" to named exports.
 
 # Example Usage
 
