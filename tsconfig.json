@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "dom"],
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "noErrorTruncation": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strict": true,
+  },
+  "files": [
+    "defaultToNamedExport.ts"
+  ]
+}
