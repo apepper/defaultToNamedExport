@@ -160,7 +160,7 @@ function convertDefaultExportToNamedExport(j: JSCodeshift, root: Collection) {
       if (
         importFrom &&
         importFrom.startsWith(".") &&
-        !importFrom.includes("/assets/images/")
+        !importFrom.match(/\.\w+$/)
       ) {
         const specifierName = specifierNode.specifiers![0].local?.name;
 
