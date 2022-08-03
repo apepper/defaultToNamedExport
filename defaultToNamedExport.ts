@@ -162,11 +162,13 @@ function convertDefaultExportToNamedExport(j: JSCodeshift, root: Collection) {
         importFrom.startsWith(".") &&
         !importFrom.match(/\.\w+$/)
       ) {
-        const specifierName = specifierNode.specifiers![0].local?.name;
-
         specifier.replace(
           j.importDeclaration(
-            [j.importSpecifier(j.identifier(specifierName!))],
+            specifierNode.specifiers?.map((importSpec) =>
+              importSpec.type === "ImportDefaultSpecifier" && importSpec.local
+                ? j.importSpecifier(j.identifier(importSpec.local.name))
+                : importSpec
+            ),
             specifierNode.source
           )
         );
